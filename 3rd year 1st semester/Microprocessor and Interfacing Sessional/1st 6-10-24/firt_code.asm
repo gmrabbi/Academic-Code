@@ -1,0 +1,31 @@
+ORG 100H
+.DATA ; Data segment starts
+A DW 11
+B DW 4 
+C DW 5
+SUM DW ?
+DIFFERENCE DW ?
+MULTIPLICATION DW ?
+DIVISION DW ?
+
+.CODE ; CODE SEGMENT HERE
+MAIN PROC ; INITIALIZE DATA SEGEMENT 
+    MOV AX, @DATA
+    MOV DS, AX 
+    
+     
+    XOR AX, AX
+    MOV AX, A
+    ADD AX, B 
+    ADD AX, C
+    
+    XOR AX, AX
+    MOV DX, AX
+    
+    MAIN ENDP; END PROCEDURE
+END MAIN
+ret
+
+
+
+                       

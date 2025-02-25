@@ -1,0 +1,6 @@
+Quick Sort and Merge Sort are both effective sorting techniques with unique advantages:
+
+Quick Sort is generally faster for in-memory sorting due to its lower constant factors but may suffer from poor performance in the worst case (O(n²)) if not implemented with good pivot selection techniques.
+Merge Sort is more predictable with a guaranteed O(n log n) time complexity, making it suitable for large datasets or when stable sorting (preserving the order of equal elements) is required. However, it requires additional memory for merging, which can be a disadvantage in space-constrained environments.
+
+Understanding these algorithms helps in selecting the appropriate sorting technique based on the nature of the data and the requirements of the application, making sorting operations more efficient.

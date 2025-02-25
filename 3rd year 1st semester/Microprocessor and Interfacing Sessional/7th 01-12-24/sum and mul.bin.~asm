@@ -1,0 +1,8 @@
+mov ax, 0123h
+mov bx, 2312h
+add ax, bx
+
+
+
+; [SOURCE]: C:\Users\Golam Mostafa Rabby\OneDrive\B.Sc in Duet\3rd year 1st semester\Sessional\Microprocessor and Interfacing Sessional\7th 01-12-24\sum and mul.asm
+

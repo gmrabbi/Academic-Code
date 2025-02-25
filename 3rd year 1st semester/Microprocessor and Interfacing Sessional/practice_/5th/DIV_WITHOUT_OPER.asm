@@ -1,0 +1,20 @@
+ORG 100H
+.DATA
+RESULT DB ? 
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX 
+    
+    MOV AX, 72
+    SHR AX, 3 
+    MOV RESULT, AL
+    
+    
+    MOV AH, 4CH
+    INT 21H
+    
+    MAIN ENDP
+END MAIN
+RET

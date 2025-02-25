@@ -1,0 +1,71 @@
+NQueens solutions
+----------------------------
+
+
+4
+Total Time taken: 0 MilliSecond
+Total solution: 2
+
+6
+Total Time taken: 0 MilliSecond
+Total solution: 6
+
+8
+Total Time taken: 0 MilliSecond
+Total solution: 98
+
+10
+Total Time taken: 0 MilliSecond
+Total solution: 822
+
+12
+Total Time taken: 265.593 MilliSecond
+Total solution: 15022
+
+14
+Total Time taken: 10389.3 MilliSecond
+Total solution: 380618
+
+16
+Total Time taken: 544193 MilliSecond
+Total solution: 15153130
+
+
+Sum of Subset
+----------------------
+
+Total Number : 10
+Total Time taken: 0 MilliSecond
+Total solution: 7
+
+Total Number : 20
+Total Time taken: 0 MilliSecond
+Total solution: 127 
+
+Total Number : 50
+Total Time taken: 0 MilliSecond
+Total solution: 15527
+
+Total Number : 70
+Total Time taken: 15.6212 MilliSecond
+Total solution: 19619
+
+Total Number : 75
+Total Time taken: 15.6101 MilliSecond
+Total solution: 24203
+
+Total Number : 80
+Total Time taken: 15.6313 MilliSecond
+Total solution: 65099
+
+Total Number : 100
+Total Time taken: 31.2462 MilliSecond
+Total solution: 509323
+
+Total Number : 150
+Total Time taken: 19854.7 MilliSecond
+Total solution: 457653387
+
+Total Number : 170
+Total Time taken: 58626.8 MilliSecond
+Total solution: 870538379

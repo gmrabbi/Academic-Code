@@ -1,0 +1,304 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int WHITE = 0;
+const int GRAY = 1;
+const int BLACK = 2;
+
+vector<int> color;
+vector<int> DiscoveryTime;
+vector<int> FinishTime;
+vector<int> Ancestor;
+
+int TimeCount;
+
+void DFS_VISIT(vector<vector<int>>& G, int u)
+{
+    DiscoveryTime[u] = ++TimeCount;
+    color[u] = GRAY;
+
+    for(int v=0; v<G[u].size(); v++)
+    {
+        if(G[u][v] == 1 && color[v] == WHITE)
+        {
+            Ancestor[v] = u;
+            DFS_VISIT(G, v);
+        }
+    }
+
+    FinishTime[u] = ++TimeCount;
+    color[u] = BLACK;
+}
+
+void DFS(vector<vector<int>>& G)
+{
+    int n = G.size();
+
+    color.assign(n, WHITE);
+    DiscoveryTime.assign(n, 0);
+    FinishTime.assign(n, 0);
+    Ancestor.assign(n, -1);
+
+    TimeCount = 0;
+
+    for(int u=0; u<n; u++)
+    {
+        if(color[u] == WHITE)
+            DFS_VISIT(G, u);
+    }
+
+    cout<<"vertex\tDiscoveryTime\tFinishTime\tAncestor"<<endl;
+    for(int u=0; u<n; u++)
+        cout<<u+1<<"\t"<<DiscoveryTime[u]<<"\t\t"<<FinishTime[u]<<"\t\t"<<Ancestor[u]+1<<endl;
+}
+
+int main()
+{
+    vector<vector<int>> G={
+        {0,1,1},
+        {1,0,1},
+        {0,0,0}
+    };
+
+    DFS(G);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int WHITE = 0;
+const int GRAY = 1;
+const int BLACK = 2;
+
+vector<int> color;
+vector<int> DiscoveryTime;
+vector<int> FinishTime;
+vector<int> Ancestor;
+vector<int> TopologicalORder;
+
+int TimeCount;
+
+void DFS_VISIT(vector<vector<int>>& G, int u)
+{
+    DiscoveryTime[u] = ++TimeCount;
+    color[u] = GRAY;
+
+    for(int v=0; v<G[u].size(); v++)
+    {
+        if(G[u][v]==1 && color[v]==WHITE)
+        {
+            Ancestor[v] = u;
+            DFS_VISIT(G, v);
+        }
+    }
+    FinishTime[u] = ++TimeCount;
+    color[u] = BLACK;
+    TopologicalORder.push_back(u);
+}
+
+void DFS(vector<vector<int>>& G)
+{
+    int n = G.size();
+
+    color.assign(n, WHITE);
+    DiscoveryTime.assign(n, 0);
+    FinishTime.assign(n, 0);
+    Ancestor.assign(n, -1);
+    TopologicalORder.clear();
+
+    TimeCount = 0;
+
+    for(int u=0; u<n; u++)
+    {
+        if(color[u] == WHITE)
+            DFS_VISIT(G, u);
+    }
+}
+
+vector<int> TOPOLOGICAL_SORT(vector<vector<int>>& G)
+{
+    DFS(G);
+    reverse(TopologicalORder.begin(), TopologicalORder.end());
+    return TopologicalORder;
+}
+
+int main()
+{
+    vector<vector<int>> G={
+        {0, 1, 0, 0, 0, 0},
+        {0, 0, 1, 0, 0, 0},
+        {0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0},
+        {0, 0, 1, 0, 0, 1},
+        {0, 0, 0, 0, 0, 0}
+    };
+
+    vector<int> sortedOrder = TOPOLOGICAL_SORT(G);
+
+    for(auto i: sortedOrder)
+        cout<<i+1<<" ";
+    cout<<endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int WHITE = 0;
+const int GRAY = 1;
+const int BLACK = 2;
+
+vector<int> color;
+vector<int> DiscoveryTime;
+vector<int> FinishTime;
+
+stack<int> finishStack;
+
+int TimeCount;
+
+void DFS_VISIT(vector<vector<int>>& G, int u)
+{
+    DiscoveryTime[u] = ++TimeCount;
+    color[u] = GRAY;
+
+    for(int v=0; v<G[u].size(); v++)
+    {
+        if(G[u][v] == 1 && color[v] == WHITE)
+        {
+            DFS_VISIT(G, v);
+        }
+    }
+
+    FinishTime[u] = ++TimeCount;
+    color[u] = BLACK;
+    finishStack.push(u);
+}
+
+void DFS(vector<vector<int>>& G)
+{
+    int n = G.size();
+
+    color.assign(n, WHITE);
+    DiscoveryTime.assign(n, 0);
+    FinishTime.assign(n, 0);
+
+    TimeCount = 0;
+
+    for(int u=0; u<n; u++)
+    {
+        if(color[u] == WHITE)
+            DFS_VISIT(G, u);
+    }
+
+    // cout<<"vertex\tDiscoveryTime\tFinishTime\tAncestor"<<endl;
+    // for(int u=0; u<n; u++)
+        // cout<<u+1<<"\t"<<DiscoveryTime[u]<<"\t\t"<<FinishTime[u]<<"\t\t"<<Ancestor[u]+1<<endl;
+}
+
+vector<vector<int>> TransposeGraph(vector<vector<int>>& G)
+{
+    int n = G.size();
+
+    vector<vector<int>> GT(n, vector<int>(n, 0));
+
+    for(int u=0; u<n; u++)
+    {
+        for(int v=0; v<G[u].size(); v++)
+        {
+            if(G[u][v] == 1)
+                GT[v][u] = 1;
+        }
+    }
+    return GT;
+}
+
+void DFS_VISIT_SCC(vector<vector<int>>& G, int u, vector<int>& component)
+{
+    color[u] = GRAY;
+    component.push_back(u);
+    for(int v=0; v<G[u].size(); v++)
+    {
+        if(G[u][v] ==1 && color[v] == WHITE)
+            DFS_VISIT_SCC(G, v, component);
+    }
+    color[u] = BLACK;
+}
+
+void findSCCs(vector<vector<int>>& G)
+{
+    DFS(G);
+
+    vector<vector<int>> GT = TransposeGraph(G);
+
+    int n = G.size();
+    color.assign(n, WHITE);
+
+    cout<<"Strongly connected Components: "<<endl;
+
+    while(!finishStack.empty())
+    {
+        int u = finishStack.top();
+        finishStack.pop();
+
+        if(color[u] == WHITE)
+        {
+            vector<int> component;
+            DFS_VISIT_SCC(GT, u, component);
+
+            cout<<"{";
+            for(int v: component)
+                cout<<v+1<<" ";
+            cout<<"}"<<endl;
+        }
+    }
+}
+
+int main()
+{
+    vector<vector<int>> G={
+        {0, 1, 0, 0, 0, 0},
+        {0, 0, 1, 0, 0, 0},
+        {0, 0, 0, 1, 1, 0},
+        {0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 0, 0}
+    };
+
+    findSCCs(G);
+    return 0;
+}
+
+
+
+
+
+

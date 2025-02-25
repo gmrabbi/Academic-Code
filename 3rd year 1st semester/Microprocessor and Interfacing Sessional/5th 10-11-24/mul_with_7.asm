@@ -1,0 +1,16 @@
+ORG 100H
+
+
+.DATA
+
+.CODE
+MAIN PROC
+    MOV DX, @DATA
+    MOV DS, AX
+    
+    MOV AH, 4CH   
+    INT 21H    
+    
+ENDP MAIN
+END MAIN
+RET

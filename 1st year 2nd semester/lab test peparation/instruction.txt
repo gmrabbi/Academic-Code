@@ -1,0 +1,7 @@
+Dear students, 
+For your labtest, as I've told in the class that for C part, you have to do program using function. Also    do practice on structure & string.
+For OOP, You'll be given  problems on inheritance & operator overloading. 
+
+IMPORTANT NOTE: No pen drive & cell phone along with any digital gadgets  is allowed during the labtest.quiz will be held in your classrooms at TE workshop building @10.30am.
+Have a good preparation. 
+All the best.

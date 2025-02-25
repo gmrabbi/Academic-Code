@@ -1,0 +1,44 @@
+ORG 100H
+
+.DATA
+N DB 11011111B
+MSG_PAL DB "PALINDROM$";
+NOT_MSG_PAL DB "NOT PALINDROM$";
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    MOV CX, 8
+    MOV BX, 0
+    MOV AX, 0
+    MOV AL, N
+    CAL:
+        SHL AL, 1
+        RCR BH, 1
+        LOOP CAL
+   CMP N, BH
+   JE PALINDROM
+   JMP NOT_PALINDROM
+   
+   PALINDROM: 
+    MOV AH, 09H
+    LEA DX, MSG_PAL
+    INT 21H
+    JMP EXIT
+  NOT_PALINDROM:
+    MOV AH, 09H
+    LEA DX, NOT_MSG_PAL
+    INT 21H
+    
+   
+     
+    
+    
+   EXIT:    
+    MOV AH, 4CH
+    INT 21H
+    MAIN ENDP
+END MAIN
+RET

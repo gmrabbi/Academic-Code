@@ -1,0 +1,9 @@
+00000000: B8 23 01                              mov ax, 0123h
+00000003: BB 12 23                              mov bx, 2312h
+00000006: 01 D8                                 add ax, bx
+                                                
+                                                
+                                                
+                                                ; [SOURCE]: C:\Users\Golam Mostafa Rabby\OneDrive\B.Sc in Duet\3rd year 1st semester\Sessional\Microprocessor and Interfacing Sessional\7th 01-12-24\sum and mul.asm
+                                                
+                                                

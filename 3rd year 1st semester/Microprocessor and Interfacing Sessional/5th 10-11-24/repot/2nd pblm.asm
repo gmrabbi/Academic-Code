@@ -1,0 +1,21 @@
+ORG 100H
+
+.DATA
+
+.CODE
+MAIN PROC
+    
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    MOV AX, 72
+    
+    SHR AX, 3 ; 2^3 =8 RESULT STORED IN AX REGISTER
+    
+    MOV AH, 4CH
+    INT 21H
+    
+    
+ENDP MAIN
+END MAIN
+RET

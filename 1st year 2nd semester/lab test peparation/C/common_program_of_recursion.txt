@@ -1,0 +1,14 @@
+Write a program in C
+1. To print first 50 natural numbers using recursion.
+2. To calculate the sum of Natural Numbers Using Recursion.
+3. To generates the Fibonacci series for a given number using
+a recursive function.
+4. To count the digits of a given number using recursion.
+5. To find the sum of digits of a number using recursion.
+6. To find GCD of two numbers using recursion.
+7. To convert a decimal number to binary using recursion.
+8. To calculate the power of any number using recursion.
+9. To calculate the factorial of natural numbers till a range
+inputted by user by recursion.
+
+

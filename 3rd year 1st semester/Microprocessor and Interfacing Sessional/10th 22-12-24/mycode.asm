@@ -1,0 +1,43 @@
+CODE SEGMENT 
+    ASSUME CS:CODE, DS:CODE
+    
+    ORG 1000H
+    MOV AL, 10000000B
+    OUT 1FH, AL
+    
+ L1:
+    MOV AL, 01000000B
+    OUT 19H, AL
+    CALL TIMER
+    
+    MOV AL, 10100100B
+    OUT 19H, AL
+    CALL TIMER
+    
+    MOV AL, 10011001B
+    OUT 19H, AL
+    CALL TIMER
+    
+    MOV AL, 10000010B
+    OUT 19H, AL
+    CALL TIMER
+    
+    MOV AL, 10000000B
+    OUT 19H, AL
+    CALL TIMER
+    JMP L1 
+    
+TIMER: MOV CX, 1
+TIMER2: PUSH CX
+        MOV CX, 0
+TIMER1: NOP
+        NOP
+        NOP
+        NOP
+        LOOP TIMER1
+        POP CX
+        LOOP TIMER2
+        RET
+        
+CODE ENDS
+END

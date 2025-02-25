@@ -1,0 +1,172 @@
+N=10,,D=10%
+Total Time taken: 0
+N= 10
+m= 2
+Total solution: 2
+
+N=10,,D=30%
+Total Time taken: 0
+N= 10
+m= 4
+Total solution: 288
+
+
+N=10,,D=50%
+Total Time taken: 30.7218
+N= 10
+m= 6
+Total solution: 15840
+
+
+N=10,,D=70%
+Total Time taken: 217.548
+N= 10
+m= 8
+Total solution: 40320
+
+
+N=10,,D=90%
+Total Time taken: 5813.59
+N= 10
+m= 10
+Total solution: 3628800
+
+
+
+D=10%': N=20
+Total Time taken: 2602.62
+N= 20
+m= 3
+Total solution: 1216512
+
+
+
+D=30%': 
+Total Time taken: 183.404
+N= 20
+m= 4
+Total solution: 13656
+
+
+D=50%': 
+Total Time taken: 271.824
+N= 20
+m= 5
+Total solution: 1800
+
+D=70%': 
+Total Time taken: 1666.57
+N= 20
+m= 7
+Total solution: 10080
+
+'D=90%': 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m= 2
+Total Time taken: 15.6309
+Total solution
+
+m= 3
+Total Time taken: 578.008
+Total solution: 1056
+
+m= 4
+Total Time taken: 27149.9
+Total solution: 59292
+
+
+
+
+
