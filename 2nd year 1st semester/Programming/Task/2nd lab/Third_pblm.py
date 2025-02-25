@@ -1,0 +1,13 @@
+score = float(input("Enter your score: "))
+
+if(score>=80.0 and score<=100.0): print("A+")
+elif(score>=75.0 and score<80.0): print("A")
+elif(score>=70.0 and score<75.0): print("A-")
+elif(score>=65.0 and score<70.0): print("B+")
+elif(score>=60.0 and score<65.0): print("B")
+elif(score>=55.0 and score<60.0): print("B-")
+elif(score>=50.0 and score<55.0): print("C")
+elif(score>=45.0 and score<50.0): print("C-")
+elif(score>=40.0 and score<45.0): print("D")
+elif(score>=0.0 and score<40.0): print("F")
+else: print("Invalid input.")

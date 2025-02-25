@@ -1,0 +1,30 @@
+WindowManager:
+    HomeWindow:
+    SecondWindow:
+
+<HomeWindow>:
+    name: "home"
+
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Password: "
+
+        TextInput:
+            id: passw
+            multiline: False
+
+        Button:
+            text: "Submit"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+
+<SecondWindow>:
+    name: "second"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current = "home"
+            root.manager.transition.direction = "left"

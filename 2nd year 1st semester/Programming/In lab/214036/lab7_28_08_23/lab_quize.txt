@@ -1,0 +1,47 @@
+"""
+a. data1 = {"cat","Dog"}
+	datatype= Set
+
+b. print(data[0]) 
+	incorrect . Because , 'set' object is not subscriptable
+
+c. data[2] = "fish"
+	incorrect . 'set' object does not support item assignment
+
+d. [1,2,3,4] , 
+	datatype = List
+
+e. data3 = {"cat":"cute", "Dog":"Funny", "Fish":"wet"}
+	datatype = Dictionary
+
+f. data4 = (1,2,3,4), 
+	datatype= Tuple
+
+g. data4[0]=10 
+	inCorrect, tuple is mutable
+
+h. print("cat" in data1) 
+	output: True
+"""
+#fjkdj
+
+"""
+Date : 4.09.23
+Time : 8-8-30
+syllabus: all provided files.
+"""
+
+conda install process
+---------------------------
+ conda env list
+ conda create -n Rabby_vir_env python=3.10
+ conda deactivate
+ conda activate Rabby_vir_env
+conda list
+conda install -c conda-forge kivy
+y
+conda list
+
+cd /d D:
+
+

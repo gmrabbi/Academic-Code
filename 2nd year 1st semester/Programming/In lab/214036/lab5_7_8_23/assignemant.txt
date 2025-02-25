@@ -1,0 +1,4 @@
+- Key value pair
+- Key must be unique
+- Datatypes of key have to be immutable
+- Datatypes of values may be any

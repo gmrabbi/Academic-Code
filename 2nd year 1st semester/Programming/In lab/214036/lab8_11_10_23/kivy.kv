@@ -1,0 +1,36 @@
+// // <MyGrid>:
+// //     cols: 1
+// //     size: root.width, root.height
+// //     Label: 
+// //         text : "Hello World!" 
+// //         font_size = 10
+// //         id : Hello
+// //     Button: 
+// //         text : "Submit"
+// //         font_size = 21
+// //         on_press: root.press()
+
+// BoxLayout:
+//     orientation: 'vertical'
+
+//     Label:
+//         text: 'Click the button to increase font size'
+//         font_size: app.font_size
+
+//     Label:
+//         text: 'Increase Font Size'
+//         on_touch_down:
+//             app.increase_font_size()
+
+
+
+BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Font Size:'
+        font_size: app.font_size
+
+    Button:
+        text: 'Increase Font Size'
+        on_press: app.increase_font_size()
